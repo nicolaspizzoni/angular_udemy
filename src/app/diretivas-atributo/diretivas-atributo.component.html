@@ -1,0 +1,26 @@
+
+<p [ngClass]="{
+  text: true,
+  error: !valor,
+  validated: valor
+}">Ng Class</p>
+
+<ng-content select="h3"></ng-content>
+
+<p [ngStyle]="{
+  'font-size': valor ? fontSize : '15px'
+}">
+Ng Style
+</p>
+
+<hr>
+<ng-content select="h2"></ng-content>
+
+<input type="text" [(ngModel)]="nome" />
+<button (click)="salvar()">
+  Salvar
+</button>
+
+<li *ngFor="let item of list">
+  {{item.nome}}
+</li>

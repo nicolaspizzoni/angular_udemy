@@ -1,0 +1,10 @@
+<header>
+  <h1>Sub Modulo importado no modulo principal {{contador}}</h1>
+</header>
+
+<div>
+  <li *ngFor="let pessoa of list; let i = index">
+    {{pessoa.nome}} - {{pessoa.idade}}
+    <button (click)="getDados(i)">Enviar</button>
+  </li>
+</div>
